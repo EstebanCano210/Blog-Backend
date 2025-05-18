@@ -6,6 +6,9 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import limiter from '../src/middlewares/validar-cant-peticiones.js';
+import postRoutes     from '../src/post/post.routes.js';
+import commentRoutes  from '../src/comment/comment.routes.js';
+import categoryRoutes from '../src/category/category.routes.js';
 
 
 const middlewares = (app) => {
@@ -18,7 +21,9 @@ const middlewares = (app) => {
 }
 
 const routes = (app) =>{
-
+    app.use('/Blog-App/v1/categories', categoryRoutes);
+    app.use('/Blog-App/v1/posts',  postRoutes);
+    app.use('/Blog-App/v1/posts', commentRoutes);
 }
 
 const conectarDB = async () => {
