@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "682a8887addd231cf5ca7fe9"
+  },
+  "post": {
+    "$oid": "682a84d1addd231cf5ca7fdd"
+  },
+  "name": "Fernando",
+  "content": "Y el texto\n",
+  "createdAt": {
+    "$date": "2025-05-19T01:25:27.034Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a9099addd231cf5ca8053"
+  },
+  "post": {
+    "$oid": "682a8a56addd231cf5ca8025"
+  },
+  "name": "Luis",
+  "content": "Hola",
+  "createdAt": {
+    "$date": "2025-05-19T01:59:53.761Z"
+  },
+  "__v": 0
+}]
