@@ -18,6 +18,7 @@ router.post(
     check('description', 'La descripción es obligatoria').not().isEmpty(),
     check('category',    'La categoría es obligatoria').not().isEmpty(),
     check('category',    'No es un ID de categoría válido').isMongoId(),
+    check('image',       'La URL de imagen no es válida').optional().isURL(),
     validatePost
   ],
   createPost
@@ -41,6 +42,7 @@ router.put(
     check('description', 'La descripción es obligatoria').not().isEmpty(),
     check('category',    'La categoría es obligatoria').not().isEmpty(),
     check('category',    'No es un ID de categoría válido').isMongoId(),
+    check('image',       'La URL de imagen no es válida').optional().isURL(),
     validatePost
   ],
   updatePost

@@ -18,12 +18,20 @@ const postSchema = new Schema({
     required: [true, 'La descripción es obligatoria'],
     trim: true
   },
+  image: {
+    type: String,
+    default: '',
+    validate: {
+      validator: v => !v || /^https?:\/\/.+\.(jpg|jpeg|png|gif|webp)$/i.test(v),
+      message: props => `'${props.value}' no es una URL de imagen válida`
+    }
+  },
   isActive: {
     type: Boolean,
     default: true
   }
 }, {
-  timestamps: true 
+  timestamps: true  // Añade createdAt y updatedAt automáticamente
 });
 
 export default model('Post', postSchema);

@@ -1,12 +1,12 @@
-import Post    from './post.model.js';
+import Post from './post.model.js';
 import Comment from '../comment/comment.model.js';
 
 const now = () => new Date().toISOString();
 
 export const createPost = async (req, res) => {
   try {
-    const { title, description, category } = req.body;
-    const post = await Post.create({ title, description, category });
+    const { title, description, category, image = '' } = req.body;
+    const post = await Post.create({ title, description, category, image });
 
     return res.status(201).json({
       status:    'success',
@@ -14,12 +14,13 @@ export const createPost = async (req, res) => {
       message:   `🎉 ¡Post '${post.title}' creado con éxito!`,
       timestamp: now(),
       data: {
-        id:         post._id,
-        title:      post.title,
-        description:post.description,
-        category:   post.category,
-        isActive:   post.isActive,
-        createdAt:  post.createdAt
+        id:          post._id,
+        title:       post.title,
+        description: post.description,
+        category:    post.category,
+        image:       post.image,
+        isActive:    post.isActive,
+        createdAt:   post.createdAt
       }
     });
   } catch (err) {
@@ -53,6 +54,7 @@ export const getPosts = async (req, res) => {
         title:       p.title,
         description: p.description,
         category:    p.category,
+        image:       p.image,
         createdAt:   p.createdAt
       }))
     });
@@ -91,8 +93,20 @@ export const getPostById = async (req, res) => {
       message:   `✅ Post '${post.title}' y ${comments.length} comentarios`,
       timestamp: now(),
       data: {
-        post,
-        comments
+        post: {
+          id:          post._id,
+          title:       post.title,
+          description: post.description,
+          category:    post.category,
+          image:       post.image,
+          createdAt:   post.createdAt
+        },
+        comments: comments.map(c => ({
+          id:        c._id,
+          name:      c.name,
+          content:   c.content,
+          createdAt: c.createdAt
+        }))
       }
     });
   } catch (err) {
@@ -110,11 +124,11 @@ export const getPostById = async (req, res) => {
 export const updatePost = async (req, res) => {
   try {
     const { id } = req.params;
-    const { title, description, category } = req.body;
+    const { title, description, category, image = '' } = req.body;
 
     const post = await Post.findOneAndUpdate(
       { _id: id, isActive: true },
-      { title, description, category },
+      { title, description, category, image },
       { new: true }
     ).populate('category', 'name');
 
@@ -132,7 +146,14 @@ export const updatePost = async (req, res) => {
       code:      200,
       message:   `✏️ Post '${post.title}' actualizado correctamente`,
       timestamp: now(),
-      data:      post
+      data:      {
+        id:          post._id,
+        title:       post.title,
+        description: post.description,
+        category:    post.category,
+        image:       post.image,
+        updatedAt:   post.updatedAt
+      }
     });
   } catch (err) {
     console.error(err);
@@ -149,7 +170,6 @@ export const updatePost = async (req, res) => {
 export const deletePost = async (req, res) => {
   try {
     const { id } = req.params;
-    // Soft-delete: marcamos isActive = false
     const post = await Post.findByIdAndUpdate(
       id,
       { isActive: false },
@@ -169,12 +189,7 @@ export const deletePost = async (req, res) => {
       status:    'success',
       code:      200,
       message:   `🚫 Post '${post.title}' desactivado correctamente`,
-      timestamp: now(),
-      data: {
-        id:       post._id,
-        title:    post.title,
-        isActive: post.isActive
-      }
+      timestamp: now()
     });
   } catch (err) {
     console.error(err);
