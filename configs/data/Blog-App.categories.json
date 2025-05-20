@@ -2,7 +2,7 @@
   "_id": {
     "$oid": "682a800baddd231cf5ca7fd4"
   },
-  "name": "Practica",
+  "name": "Practica 3",
   "isActive": true,
   "createdAt": {
     "$date": "2025-05-19T00:49:15.215Z"

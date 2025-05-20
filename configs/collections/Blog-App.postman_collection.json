@@ -7,226 +7,342 @@
 	},
 	"item": [
 		{
-			"name": "Create Category",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{ \"name\": \"Practica Supervisada\" }"
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"name\": \"Tecnología 3\" }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/Blog-App/v1/categories/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Blog-App",
+								"v1",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:3000/Blog-App/v1/categories/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"Blog-App",
-						"v1",
-						"categories",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Categories",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/Blog-App/v1/categories/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"Blog-App",
-						"v1",
-						"categories",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update Category",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{ \"name\": \"Taller 3\" }"
+				{
+					"name": "Get Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/Blog-App/v1/categories/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Blog-App",
+								"v1",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:3000/Blog-App/v1/categories/682a4bf0c0fa2796a124c12e",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"Blog-App",
-						"v1",
-						"categories",
-						"682a4bf0c0fa2796a124c12e"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete Category",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/Blog-App/v1/categories/682a4bf0c0fa2796a124c12e",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"Blog-App",
-						"v1",
-						"categories",
-						"682a4bf0c0fa2796a124c12e"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create Post",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{ \"title\": \"Ejemplo\", \"description\": \"Ejemplo de post\", \"category\": \"682a4e523a10b60b7c3fb28c\" }"
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"name\": \"Tecnologia 3\" }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/Blog-App/v1/categories/682a4e523a10b60b7c3fb28c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Blog-App",
+								"v1",
+								"categories",
+								"682a4e523a10b60b7c3fb28c"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:3000/Blog-App/v1/categories/posts/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"Blog-App",
-						"v1",
-						"categories",
-						"posts",
-						""
-					]
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/Blog-App/v1/categories/682a4e333a10b60b7c3fb289",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Blog-App",
+								"v1",
+								"categories",
+								"682a4e333a10b60b7c3fb289"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Get Posts",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Post by ID",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update Post",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"Fundamentos de Álgebra\",\r\n  \"description\": \"En este artículo cubriremos los principios básicos del álgebra, incluyendo operaciones con polinomios, factorización y resolución de ecuaciones de primer y segundo grado. Veremos ejemplos paso a paso, estrategias de simplificación y consejos para evitar errores comunes. Ideal para estudiantes que se inician en matemáticas y necesitan una guía completa y didáctica.\",\r\n  \"category\": \"682a800baddd231cf5ca7fd4\",\r\n  \"image\": \"https://previews.123rf.com/images/tmricons/tmricons1707/tmricons170700580/81207012-icono-de-signo-de-reproducci%C3%B3n-aleatoria-bot%C3%B3n-aleatorio.jpg\"\r\n}\r\n"
+			"name": "Post",
+			"item": [
+				{
+					"name": "Update Post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Fundamentos de Álgebra\",\r\n  \"description\": \"En este artículo cubriremos los principios básicos del álgebra, incluyendo operaciones con polinomios, factorización y resolución de ecuaciones de primer y segundo grado. Veremos ejemplos paso a paso, estrategias de simplificación y consejos para evitar errores comunes. Ideal para estudiantes que se inician en matemáticas y necesitan una guía completa y didáctica.\",\r\n  \"category\": \"682a800baddd231cf5ca7fd4\",\r\n  \"image\": \"https://previews.123rf.com/images/tmricons/tmricons1707/tmricons170700580/81207012-icono-de-signo-de-reproducci%C3%B3n-aleatoria-bot%C3%B3n-aleatorio.jpg\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:3000/Blog-App/v1/posts/682a8a40addd231cf5ca801b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Blog-App",
+								"v1",
+								"posts",
+								"682a8a40addd231cf5ca801b"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:3000/Blog-App/v1/posts/682a8a40addd231cf5ca801b",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"Blog-App",
-						"v1",
-						"posts",
-						"682a8a40addd231cf5ca801b"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete Post",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": ""
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create Comment",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{ \"name\": \"Autor\", \"content\": \"Texto del comentario\" }"
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"principios de la Programacion\",\r\n  \"description\": \"En este artículo cubriremos los principios básicos del álgebra, incluyendo operaciones con polinomios, factorización y resolución de ecuaciones de primer y segundo grado. Veremos ejemplos paso a paso, estrategias de simplificación y consejos para evitar errores comunes. Ideal para estudiantes que se inician en matemáticas y necesitan una guía completa y didáctica.\",\r\n  \"category\": \"682a8016addd231cf5ca7fd6\",\r\n  \"image\": \"https://img.freepik.com/vector-gratis/aprendizaje-lenguajes-programacion-cursos-codificacion-software-clase-desarrollo-sitios-web-escritura-guiones-personajes-dibujos-animados-programadores-ti_335657-789.jpg\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:3000/Blog-App/v1/posts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Blog-App",
+								"v1",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": ""
+				{
+					"name": "Get Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/Blog-App/v1/posts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Blog-App",
+								"v1",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/Blog-App/v1/posts/682a53f361dd26dae78064cb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Blog-App",
+								"v1",
+								"posts",
+								"682a53f361dd26dae78064cb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/Blog-App/v1/posts/682a531b61dd26dae78064c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Blog-App",
+								"v1",
+								"posts",
+								"682a531b61dd26dae78064c7"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Create Comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Juan Pérez\",\r\n  \"content\": \"¡Excelente publicación!\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:3000/Blog-App/v1/posts/682a53f361dd26dae78064cb/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Blog-App",
+								"v1",
+								"posts",
+								"682a53f361dd26dae78064cb",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Comment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"\",\r\n  \"content\": \"¡Excelente publicación Me encanto!\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/Blog-App/v1/posts/682a8a40addd231cf5ca801b/comments/682bdda452f58224afefd359",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Blog-App",
+								"v1",
+								"posts",
+								"682a8a40addd231cf5ca801b",
+								"comments",
+								"682bdda452f58224afefd359"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/Blog-App/v1/posts/682a8a40addd231cf5ca801b/comments/682bdda452f58224afefd359",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Blog-App",
+								"v1",
+								"posts",
+								"682a8a40addd231cf5ca801b",
+								"comments",
+								"682bdda452f58224afefd359"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"variable": [

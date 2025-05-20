@@ -19,44 +19,6 @@
 },
 {
   "_id": {
-    "$oid": "682a8a40addd231cf5ca801b"
-  },
-  "category": {
-    "$oid": "682a800baddd231cf5ca7fd4"
-  },
-  "title": "Fundamentos de Álgebra",
-  "description": "En este artículo cubriremos los principios básicos del álgebra, incluyendo operaciones con polinomios, factorización y resolución de ecuaciones de primer y segundo grado. Veremos ejemplos paso a paso, estrategias de simplificación y consejos para evitar errores comunes. Ideal para estudiantes que se inician en matemáticas y necesitan una guía completa y didáctica.",
-  "image": "https://previews.123rf.com/images/tmricons/tmricons1707/tmricons170700580/81207012-icono-de-signo-de-reproducci%C3%B3n-aleatoria-bot%C3%B3n-aleatorio.jpg",
-  "isActive": true,
-  "createdAt": {
-    "$date": "2025-05-19T01:32:48.256Z"
-  },
-  "updatedAt": {
-    "$date": "2025-05-19T02:01:36.219Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "682a8a4caddd231cf5ca8020"
-  },
-  "category": {
-    "$oid": "682a8020addd231cf5ca7fd8"
-  },
-  "title": "Historia de la Filosofía Antigua",
-  "description": "Recorre la evolución del pensamiento filosófico desde los presocráticos hasta Platón y Aristóteles. Analizaremos las principales escuelas (jonia, eleática, sofística) y sus aportes al desarrollo del método crítico y la lógica. Además, veremos fragmentos seleccionados de textos originales y su influencia en la filosofía moderna.",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Plato_School_of_Athens.jpg",
-  "isActive": true,
-  "createdAt": {
-    "$date": "2025-05-19T01:33:00.541Z"
-  },
-  "updatedAt": {
-    "$date": "2025-05-19T01:33:00.541Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
     "$oid": "682a8a56addd231cf5ca8025"
   },
   "category": {
@@ -71,6 +33,25 @@
   },
   "updatedAt": {
     "$date": "2025-05-19T01:33:10.061Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682be6a952f58224afefd3f1"
+  },
+  "category": {
+    "$oid": "682a8016addd231cf5ca7fd6"
+  },
+  "title": "principios de la Programacion",
+  "description": "En este artículo cubriremos los principios básicos del álgebra, incluyendo operaciones con polinomios, factorización y resolución de ecuaciones de primer y segundo grado. Veremos ejemplos paso a paso, estrategias de simplificación y consejos para evitar errores comunes. Ideal para estudiantes que se inician en matemáticas y necesitan una guía completa y didáctica.",
+  "image": "https://img.freepik.com/vector-gratis/aprendizaje-lenguajes-programacion-cursos-codificacion-software-clase-desarrollo-sitios-web-escritura-guiones-personajes-dibujos-animados-programadores-ti_335657-789.jpg",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-05-20T02:19:21.904Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-20T02:19:21.904Z"
   },
   "__v": 0
 }]
